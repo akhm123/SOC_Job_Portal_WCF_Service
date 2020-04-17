@@ -1,0 +1,7 @@
+D:\socproject\jobportalservice\obj\Debug\jobportalservice.csprojAssemblyReference.cache
+D:\socproject\jobportalservice\bin\Debug\App_Data\Database1.mdf
+D:\socproject\jobportalservice\bin\Debug\jobportalservice.dll.config
+D:\socproject\jobportalservice\bin\Debug\jobportalservice.dll
+D:\socproject\jobportalservice\bin\Debug\jobportalservice.pdb
+D:\socproject\jobportalservice\obj\Debug\jobportalservice.dll
+D:\socproject\jobportalservice\obj\Debug\jobportalservice.pdb
