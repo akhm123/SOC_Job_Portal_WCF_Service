@@ -23,7 +23,7 @@ namespace Jobportalclient
                 Email.Text = grid.Rows[0].Cells[4].Text;
                 Role.Text = grid.Rows[0].Cells[5].Text;
                 id = grid.Rows[0].Cells[0].Text;
-                pass = grid.Rows[0].Cells[2].Text;
+                Session["pass"]= grid.Rows[0].Cells[2].Text;
             }
             }
 
@@ -33,7 +33,7 @@ namespace Jobportalclient
             ServiceReference2.User user = new ServiceReference2.User();
             user.Contact = Contact.Text;
             user.Email = Email.Text;
-            user.Password = pass.ToString();
+            user.Password = Session["pass"].ToString();
             user.Role = Role.Text;
             user.UserName = Username.Text;
         
