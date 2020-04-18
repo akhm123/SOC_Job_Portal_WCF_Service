@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="JobPosting.aspx.cs" Inherits="Jobportalclient.JobPosting" %>
+﻿<%@Page Language="C#" AutoEventWireup="true" CodeBehind="JobPosting.aspx.cs" Inherits="Jobportalclient.JobPosting" %>
 
 <!DOCTYPE html>
 
@@ -41,9 +41,7 @@
 			<a href="#" class="contact100-header-logo">
 				<img src="Theme/images/icons/logo.png" alt="LOGO"/>
 			</a>
-            <button onclick="()=>{Response.Redirect("ViewByCompany.aspx")}" >
-					Job Posting
-                   </button>
+           
 			<div>
 				<button class="btn-show-contact100" >
 					Job Posting

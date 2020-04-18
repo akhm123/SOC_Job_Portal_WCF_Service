@@ -7,7 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-<<<<<<< HEAD
 namespace Jobportalclient {
     
     
@@ -24,58 +23,29 @@ namespace Jobportalclient {
         
         /// <summary>
         /// Button2 control.
-=======
-namespace Jobportalclient
-{
-
-
-    public partial class UserHome
-    {
-
-        /// <summary>
-        /// DropDownList1 control.
->>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
         /// Button3 control.
-=======
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-
-        /// <summary>
-        /// GridView1 control.
->>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Button Button3;
         
         /// <summary>
         /// Button4 control.
-=======
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-
-        /// <summary>
-        /// Label1 control.
->>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Button Button4;
-=======
-        protected global::System.Web.UI.WebControls.Label Label1;
->>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
     }
 }

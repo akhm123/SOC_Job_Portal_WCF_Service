@@ -47,28 +47,19 @@
 		</div>
 	</div>
 
-<<<<<<< HEAD
     
-=======
-
->>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
                  
 <div class="container-contact100">
 		<div class="wrap-contact100">
 		
 
-<<<<<<< HEAD
 				<div class="contact100-form-title" style="background-image: url(Theme/images/bg-02.jpg);">
-=======
-			<div class="contact100-form-title" style="background-image: url(Theme/images/bg-02.jpg);">
->>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
 				<span>User Dashboard</span>
 			</div>
           
                
 
 			<form  runat="server" class="contact100-form validate-form">
-<<<<<<< HEAD
                 <div class="container-contact100-form-btn">
 					 <asp:Button OnClick="Button1_Click" class="contact100-form-btn" ID="Button1" runat="server" Text="Profile" />
                    			
@@ -85,43 +76,6 @@
 					 <asp:Button OnClick="Button4_Click" class="contact100-form-btn" ID="Button4" runat="server" Text="Update Details" />
                    			
                 </div>
-=======
-              
-               <%-- <div class="container-contact100-form-btn">
-					 <asp:Button OnClick="Button2_Click" class="contact100-form-btn" ID="Button2" runat="server" Text="update" />
-                   			
-                </div>--%>
-               
-				
-               
-
-               
-               
-                
-               
-			
-			    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged1">
-                </asp:DropDownList>
-                <asp:GridView ID="GridView1" runat="server">
-					<Columns>
-			 <asp:TemplateField>
-                <ItemTemplate>
-                    <asp:Button ID="Apply" Text="Apply" runat="server" />
-                </ItemTemplate>
-            </asp:TemplateField></Columns>
-                </asp:GridView>
-               
-				
-               
-
-               
-               
-                
-               
-			
-			    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-               
->>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
 				
                
 
@@ -135,13 +89,7 @@
                
                 
 	</div>
-<<<<<<< HEAD
   
-=======
-   
-
-
->>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
          
 <!--===============================================================================================-->
 	<script src="Theme/vendor/jquery/jquery-3.2.1.min.js"></script>
