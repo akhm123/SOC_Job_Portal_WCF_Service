@@ -356,6 +356,18 @@ namespace Jobportalclient.ServiceReference2 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetCompanyData", ReplyAction="http://tempuri.org/IService1/GetCompanyDataResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> GetCompanyDataAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetSingleCompanyData", ReplyAction="http://tempuri.org/IService1/GetSingleCompanyDataResponse")]
+        System.Data.DataSet GetSingleCompanyData(string cname);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetSingleCompanyData", ReplyAction="http://tempuri.org/IService1/GetSingleCompanyDataResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetSingleCompanyDataAsync(string cname);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeletePostedJob", ReplyAction="http://tempuri.org/IService1/DeletePostedJobResponse")]
+        string DeletePostedJob(string name, string postname);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeletePostedJob", ReplyAction="http://tempuri.org/IService1/DeletePostedJobResponse")]
+        System.Threading.Tasks.Task<string> DeletePostedJobAsync(string name, string postname);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ApplyForCompany", ReplyAction="http://tempuri.org/IService1/ApplyForCompanyResponse")]
         string ApplyForCompany(Jobportalclient.ServiceReference2.JobApplication a);
         
@@ -440,6 +452,22 @@ namespace Jobportalclient.ServiceReference2 {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> GetCompanyDataAsync() {
             return base.Channel.GetCompanyDataAsync();
+        }
+        
+        public System.Data.DataSet GetSingleCompanyData(string cname) {
+            return base.Channel.GetSingleCompanyData(cname);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetSingleCompanyDataAsync(string cname) {
+            return base.Channel.GetSingleCompanyDataAsync(cname);
+        }
+        
+        public string DeletePostedJob(string name, string postname) {
+            return base.Channel.DeletePostedJob(name, postname);
+        }
+        
+        public System.Threading.Tasks.Task<string> DeletePostedJobAsync(string name, string postname) {
+            return base.Channel.DeletePostedJobAsync(name, postname);
         }
         
         public string ApplyForCompany(Jobportalclient.ServiceReference2.JobApplication a) {

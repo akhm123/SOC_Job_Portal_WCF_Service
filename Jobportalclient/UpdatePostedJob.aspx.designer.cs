@@ -10,7 +10,7 @@
 namespace Jobportalclient {
     
     
-    public partial class ViewByCompanyList {
+    public partial class UpdatePostedJob {
         
         /// <summary>
         /// form1 control.

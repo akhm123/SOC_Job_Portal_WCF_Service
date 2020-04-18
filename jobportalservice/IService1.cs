@@ -17,7 +17,12 @@ namespace jobportalservice
 
         [OperationContract]
         DataSet GetCompanyData();
+        [OperationContract]
 
+        DataSet GetSingleCompanyData(string cname);
+        [OperationContract]
+
+        string DeletePostedJob(string name, string postname);
         [OperationContract]
         string ApplyForCompany(JobApplication a);
 

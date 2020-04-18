@@ -38,7 +38,7 @@ namespace Jobportalclient
         protected void Button4_Click(object sender, EventArgs e)
         {
 
-            Response.Redirect("ViewByCompany.aspx");
+            Response.Redirect("UpdatePostedJob.aspx");
 
 
         }

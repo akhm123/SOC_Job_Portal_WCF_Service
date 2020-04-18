@@ -25,7 +25,8 @@ namespace Jobportalclient
             if(st.Equals("login"))
             {
                 Session["username"] = u.UserName.ToString();
-                Response.Redirect("UserHome.aspx");
+
+                Response.Redirect("company.aspx");
             }
             else
             {

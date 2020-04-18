@@ -113,6 +113,24 @@ namespace jobportalservice
 
         }
 
+
+
+        public DataSet GetSingleCompanyData(string cname)
+        {
+            string message;
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from Company where name='"+cname+"'", con);// (name,postname,vacancy,qualification,salary,description,jobid) values(@name,@postname,@vacancy,@qualification,@salary,@description,@jobid)", con);
+            cmd.ExecuteNonQuery();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            return ds;
+            
+        }
+
+
         public string ApplyForCompany(JobApplication a)
         {
             string message;
@@ -207,6 +225,28 @@ namespace jobportalservice
             else
             {
                 message = " Details not inserted successfully";
+            }
+            con.Close();
+            return message;
+        }
+
+
+        public string DeletePostedJob(string name,string postname)
+        {
+            string message;
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Delete From [Company] Where name=@name and postname=@postname ", con);
+            cmd.Parameters.AddWithValue("@name",name);
+            cmd.Parameters.AddWithValue("@postname",postname);
+            int result = cmd.ExecuteNonQuery();
+            //int result = cmd.ExecuteNonQuery();
+            if (result == 1)
+            {
+                message = "deleted";
+            }
+            else
+            {
+                message = " Details not deleeted successfully";
             }
             con.Close();
             return message;
