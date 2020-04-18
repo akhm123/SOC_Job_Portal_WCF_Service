@@ -24,10 +24,13 @@ namespace jobportalservice
         [OperationContract]
         string AddUser(User u);
 
+<<<<<<< HEAD
 
         [OperationContract]
         DataSet getUser(string username);
 
+=======
+>>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
         [OperationContract]
         DataSet SelectUserbyCompany(string CompanyName);
 

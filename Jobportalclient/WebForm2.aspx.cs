@@ -11,7 +11,11 @@ namespace Jobportalclient
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             ServiceReference2.Service1Client s = new ServiceReference2.Service1Client("BasicHttpBinding_IService1");
+=======
+            JobPortalRef.Service1Client s = new JobPortalRef.Service1Client("BasicHttpBinding_IService1");
+>>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
             GridView1.DataSource = s.GetCompanyData();
             GridView1.DataBind();
         }

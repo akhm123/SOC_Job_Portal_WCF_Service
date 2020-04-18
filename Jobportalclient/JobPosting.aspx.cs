@@ -16,8 +16,13 @@ namespace Jobportalclient
         protected void Button1_Click(object sender, EventArgs e)
         {
 
+<<<<<<< HEAD
             ServiceReference2.Service1Client client = new ServiceReference2.Service1Client("BasicHttpBinding_IService1");
             ServiceReference2.CompanyDetails c = new ServiceReference2.CompanyDetails();
+=======
+            JobPortalRef.Service1Client client = new JobPortalRef.Service1Client("BasicHttpBinding_IService1");
+            JobPortalRef.CompanyDetails c = new JobPortalRef.CompanyDetails();
+>>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
             c.Name = Companyname.Text;
             c.Postname = PostName.Text;
             c.Qualification = Qualification.Text;

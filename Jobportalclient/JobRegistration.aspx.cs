@@ -9,7 +9,11 @@ namespace Jobportalclient
 {
     public partial class JobRegistration : System.Web.UI.Page
     {
+<<<<<<< HEAD
         ServiceReference2.Service1Client s = new ServiceReference2.Service1Client("BasicHttpBinding_IService1");
+=======
+        JobPortalRef.Service1Client s = new JobPortalRef.Service1Client("BasicHttpBinding_IService1");
+>>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -17,7 +21,11 @@ namespace Jobportalclient
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             ServiceReference2.CompanyDetails c = new ServiceReference2.CompanyDetails();
+=======
+            JobPortalRef.CompanyDetails c = new JobPortalRef.CompanyDetails();
+>>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
             c.Name = TextBox1.Text;
             c.Postname = TextBox2.Text;
             c.Jobid = TextBox3.Text;

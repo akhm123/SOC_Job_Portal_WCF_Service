@@ -5,6 +5,7 @@ D:\socproject\jobportalservice\bin\Debug\jobportalservice.dll
 D:\socproject\jobportalservice\bin\Debug\jobportalservice.pdb
 D:\socproject\jobportalservice\obj\Debug\jobportalservice.dll
 D:\socproject\jobportalservice\obj\Debug\jobportalservice.pdb
+<<<<<<< HEAD
 C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\jobportalservice\bin\Debug\App_Data\Database1.mdf
 C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\jobportalservice\bin\Debug\jobportalservice.dll.config
 C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\jobportalservice\bin\Debug\jobportalservice.dll
@@ -13,3 +14,5 @@ C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\jobporta
 C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\jobportalservice\obj\Debug\jobportalservice.csproj.CoreCompileInputs.cache
 C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\jobportalservice\obj\Debug\jobportalservice.dll
 C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\jobportalservice\obj\Debug\jobportalservice.pdb
+=======
+>>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3

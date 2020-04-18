@@ -13,10 +13,17 @@ namespace jobportalservice
     public class Service1 : IService1
     {
 
+<<<<<<< HEAD
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\harsh\Documents\ExSoc.mdf;Integrated Security=True;Connect Timeout=30");
         public DataSet SelectUserbyCompany(string CompanyName)
         {
           
+=======
+
+        public DataSet SelectUserbyCompany(string CompanyName)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\socproject\jobportalservice\App_Data\Database1.mdf;Integrated Security=True;Connect Timeout=30");
+>>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
             con.Open();
            
             SqlCommand cmd = new SqlCommand("Select * from [User] where UserName in(Select UserName from JobApplication where Companyname=@Company)", con);
@@ -32,6 +39,10 @@ namespace jobportalservice
 
         public DataSet SelectUserbyPostCompany(string CompanyName,string jobid)
         {
+<<<<<<< HEAD
+=======
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\socproject\jobportalservice\App_Data\Database1.mdf;Integrated Security=True;Connect Timeout=30");
+>>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
             con.Open();
 
             SqlCommand cmd = new SqlCommand("Select * from [User] where UserName in(Select UserName from JobApplication where Companyname=@Company and Jobid=@jobid)", con);
@@ -48,11 +59,20 @@ namespace jobportalservice
 
         public string UpdateUser(User user)
         {
+<<<<<<< HEAD
             con.Open();
             SqlCommand cmd = new SqlCommand("update [User] set Password=@Password,Contact=@Contact, Email=@Email where UserName=@UserName", con);
             cmd.Parameters.AddWithValue("@Password",user.Password);
             cmd.Parameters.AddWithValue("@Contact",user.Contact);
             cmd.Parameters.AddWithValue("@Email",user.Email);
+=======
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\socproject\jobportalservice\App_Data\Database1.mdf;Integrated Security=True;Connect Timeout=30");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("update [user] set Password=@Password,Contact=@Contact, Email=@Email where UserName=@UserName", con);
+            cmd.Parameters.AddWithValue("@Password", user.Password);
+            cmd.Parameters.AddWithValue("@Contact", user.Contact);
+            cmd.Parameters.AddWithValue("@Email", user.Email);
+>>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
             cmd.Parameters.AddWithValue("@UserName", user.UserName);
             cmd.ExecuteNonQuery();
             return "updated";
@@ -62,6 +82,10 @@ namespace jobportalservice
         public string InsertData(CompanyDetails c)
         {
             string Message;
+<<<<<<< HEAD
+=======
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\socproject\jobportalservice\App_Data\Database1.mdf;Integrated Security=True;Connect Timeout=30");
+>>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
             con.Open();
             SqlCommand cmd = new SqlCommand("insert into Company(name,postname,vacancy,qualification,salary,description,jobid) values(@name,@postname,@vacancy,@qualification,@salary,@description,@jobid)", con);
             cmd.Parameters.AddWithValue("@name",c.Name);
@@ -91,6 +115,10 @@ namespace jobportalservice
         public DataSet GetCompanyData()
         {
             string message;
+<<<<<<< HEAD
+=======
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\socproject\jobportalservice\App_Data\Database1.mdf;Integrated Security=True;Connect Timeout=30");
+>>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
             con.Open();
             SqlCommand cmd = new SqlCommand("select * from Company", con);// (name,postname,vacancy,qualification,salary,description,jobid) values(@name,@postname,@vacancy,@qualification,@salary,@description,@jobid)", con);
             cmd.ExecuteNonQuery();
@@ -116,6 +144,10 @@ namespace jobportalservice
         public string ApplyForCompany(JobApplication a)
         {
             string message;
+<<<<<<< HEAD
+=======
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\socproject\jobportalservice\App_Data\Database1.mdf;Integrated Security=True;Connect Timeout=30");
+>>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
             con.Open();
             SqlCommand cmd = new SqlCommand("insert into JobApplication (UserName,Companyname,Jobid) values(@UserName,@Company,@Jobid)", con);
             cmd.Parameters.AddWithValue("@UserName", a.UserName);
@@ -139,6 +171,10 @@ namespace jobportalservice
         public string Login(User u)
         {
             string message;
+<<<<<<< HEAD
+=======
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\socproject\jobportalservice\App_Data\Database1.mdf;Integrated Security=True;Connect Timeout=30");
+>>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
             con.Open();
 
 
@@ -156,6 +192,7 @@ namespace jobportalservice
         }
 
 
+<<<<<<< HEAD
         public DataSet getUser(string username)
         {
             string message;
@@ -177,6 +214,12 @@ namespace jobportalservice
         public string AddUser(User u)
         {
             string message;
+=======
+        public string AddUser(User u)
+        {
+            string message;
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\socproject\jobportalservice\App_Data\Database1.mdf;Integrated Security=True;Connect Timeout=30");
+>>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
             con.Open();
 
 

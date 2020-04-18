@@ -56,6 +56,7 @@ D:\socproject\Jobportalclient\obj\Debug\Jobportalclient.csprojAssemblyReference.
 D:\socproject\Jobportalclient\obj\Debug\Jobportalclient.csproj.CopyComplete
 D:\socproject\Jobportalclient\obj\Debug\Jobportalclient.dll
 D:\socproject\Jobportalclient\obj\Debug\Jobportalclient.pdb
+<<<<<<< HEAD
 C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\Jobportalclient\bin\Jobportalclient.dll.config
 C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\Jobportalclient\bin\Jobportalclient.dll
 C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\Jobportalclient\bin\Jobportalclient.pdb
@@ -115,3 +116,5 @@ C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\Jobporta
 C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\Jobportalclient\obj\Debug\Jobportalclient.csproj.CopyComplete
 C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\Jobportalclient\obj\Debug\Jobportalclient.dll
 C:\Users\harsh\Desktop\Sem6\SOC\Project\socfinal-master\socfinal-master\Jobportalclient\obj\Debug\Jobportalclient.pdb
+=======
+>>>>>>> 75131fa61f20113d733be844fbb8e9ea071441f3
