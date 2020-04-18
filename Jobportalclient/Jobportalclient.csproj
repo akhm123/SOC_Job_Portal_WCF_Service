@@ -195,6 +195,7 @@
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.XDocument.dll" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe" />
+    <Content Include="UpdateDetails.aspx" />
     <Content Include="UpdatePostedJob.aspx" />
     <Content Include="User.aspx" />
     <Content Include="UserHome.aspx" />
@@ -248,6 +249,13 @@
       <DependentUpon>profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateDetails.aspx.cs">
+      <DependentUpon>UpdateDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateDetails.aspx.designer.cs">
+      <DependentUpon>UpdateDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UpdatePostedJob.aspx.cs">
       <DependentUpon>UpdatePostedJob.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

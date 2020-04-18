@@ -87,6 +87,35 @@ namespace jobportalservice
         }
 
 
+        public string UpdatePostedJob(CompanyDetails c,int id)
+        {
+            string Message;
+            con.Open();
+            SqlCommand cmd = new SqlCommand("update [Company] set name=@name ,postname=@postname,vacancy=@vacancy,qualification=@qualification,salary=@salary,description=@description,jobid=@jobid where id=@id", con);
+            cmd.Parameters.AddWithValue("@name", c.Name);
+           
+            cmd.Parameters.AddWithValue("@postname", c.Postname);
+            cmd.Parameters.AddWithValue("@vacancy", c.Vacancy);
+            cmd.Parameters.AddWithValue("@qualification", c.Qualification);
+            cmd.Parameters.AddWithValue("@salary", c.Salary);
+
+            cmd.Parameters.AddWithValue("@description", c.Description);
+            cmd.Parameters.AddWithValue("@jobid", c.Jobid);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            int result = cmd.ExecuteNonQuery();
+            if (result == 1)
+            {
+
+                Message = " Details inserted successfully";
+            }
+            else
+            {
+                Message = " Details not inserted successfully";
+            }
+            con.Close();
+            return Message;
+        }
 
         public DataSet GetCompanyData()
         {

@@ -409,6 +409,12 @@ namespace Jobportalclient.ServiceReference2 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
         System.Threading.Tasks.Task<string> LoginAsync(Jobportalclient.ServiceReference2.User u);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdatePostedJob", ReplyAction="http://tempuri.org/IService1/UpdatePostedJobResponse")]
+        string UpdatePostedJob(Jobportalclient.ServiceReference2.CompanyDetails c, int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdatePostedJob", ReplyAction="http://tempuri.org/IService1/UpdatePostedJobResponse")]
+        System.Threading.Tasks.Task<string> UpdatePostedJobAsync(Jobportalclient.ServiceReference2.CompanyDetails c, int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -524,6 +530,14 @@ namespace Jobportalclient.ServiceReference2 {
         
         public System.Threading.Tasks.Task<string> LoginAsync(Jobportalclient.ServiceReference2.User u) {
             return base.Channel.LoginAsync(u);
+        }
+        
+        public string UpdatePostedJob(Jobportalclient.ServiceReference2.CompanyDetails c, int id) {
+            return base.Channel.UpdatePostedJob(c, id);
+        }
+        
+        public System.Threading.Tasks.Task<string> UpdatePostedJobAsync(Jobportalclient.ServiceReference2.CompanyDetails c, int id) {
+            return base.Channel.UpdatePostedJobAsync(c, id);
         }
     }
 }

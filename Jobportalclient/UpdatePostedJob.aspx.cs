@@ -26,10 +26,40 @@ namespace Jobportalclient
             GridViewRow clickedRow = ((Button)sender).NamingContainer as GridViewRow;
             int x = clickedRow.RowIndex;
             ServiceReference2.JobApplication j = new ServiceReference2.JobApplication();
-            string name = GridView1.Rows[x].Cells[1].Text;
-            string postname = GridView1.Rows[x].Cells[2].Text;
+            string name = GridView1.Rows[x].Cells[3].Text;
+            string postname = GridView1.Rows[x].Cells[4].Text;
             string k = s.DeletePostedJob(name,postname);
             Response.Redirect("company.aspx");
+
+        }
+        protected void updatedetails(object sender, System.EventArgs e)
+        {
+            ServiceReference2.Service1Client s = new ServiceReference2.Service1Client("BasicHttpBinding_IService1");
+
+            Button lb = sender as Button;
+            GridViewRow clickedRow = ((Button)sender).NamingContainer as GridViewRow;
+            int x = clickedRow.RowIndex;
+            ServiceReference2.CompanyDetails j = new ServiceReference2.CompanyDetails();
+            j.Name= GridView1.Rows[x].Cells[3].Text;
+            j.Postname = GridView1.Rows[x].Cells[4].Text;
+            j.Vacancy = Int32.Parse(GridView1.Rows[x].Cells[5].Text);
+            j.Qualification = GridView1.Rows[x].Cells[6].Text;
+            j.Salary= GridView1.Rows[x].Cells[7].Text;
+            j.Description= GridView1.Rows[x].Cells[8].Text;
+            j.Jobid = GridView1.Rows[x].Cells[9].Text;
+            int id = Int32.Parse(GridView1.Rows[x].Cells[2].Text);
+           // string k = s.UpdatePostedJob(j,id);
+            Session["j.Name"] = GridView1.Rows[x].Cells[3].Text;
+            Session["j.Postname"] = GridView1.Rows[x].Cells[4].Text;
+            Session["j.Vacancy"] = Int32.Parse(GridView1.Rows[x].Cells[5].Text);
+
+     Session["j.Qualification"] = GridView1.Rows[x].Cells[6].Text;
+             Session["j.Salary"] = GridView1.Rows[x].Cells[7].Text;
+             Session["j.Description"] = GridView1.Rows[x].Cells[8].Text;
+             Session["j.Jobid"]= GridView1.Rows[x].Cells[9].Text;
+            Session["id"] = id.ToString();
+
+           Response.Redirect("UpdateDetails.aspx");
 
         }
     }

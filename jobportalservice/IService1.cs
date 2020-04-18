@@ -45,6 +45,9 @@ namespace jobportalservice
        
         [OperationContract]
         string Login(User u);
+
+        [OperationContract]
+        string UpdatePostedJob(CompanyDetails c, int id);
         // TODO: Add your service operations here
     }
 
