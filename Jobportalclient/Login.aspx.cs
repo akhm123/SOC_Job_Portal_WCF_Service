@@ -12,6 +12,7 @@ namespace Jobportalclient
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            label1.Text = "";
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -20,18 +21,29 @@ namespace Jobportalclient
             ServiceReference2.User u = new ServiceReference2.User();
             u.UserName = TextBox1.Text;
             u.Password = TextBox2.Text;
-            u.Role = TextBox3.Text;
-            string st=s.Login(u);
-            if(st.Equals("login"))
+            u.Role = DropDownList1.SelectedValue;
+        
+            string st = s.Login(u);
+            if (st.Equals("login") && u.Role.Equals("user"))
             {
-                Session["username"] = u.UserName.ToString();
+                Session["username"] = u.UserName;
+                Session["role"] = u.Role;
+                Response.Redirect("UserHome.aspx");
+            }
 
+            else if (st.Equals("login") && u.Role.Equals("company"))
+            {
+                Session["username"] = u.UserName;
+                Session["role"] = u.Role;
                 Response.Redirect("company.aspx");
             }
+
             else
             {
-                Response.Redirect("Login.aspx");
+                label1.Text = "Login details invalid";
+                // Response.Redirect("Login.aspx");
             }
+         
             
         }
     }

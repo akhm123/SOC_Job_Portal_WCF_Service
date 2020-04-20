@@ -48,6 +48,12 @@ namespace jobportalservice
 
         [OperationContract]
         string UpdatePostedJob(CompanyDetails c, int id);
+
+        [OperationContract]
+        DataSet DisplayAppliedPost(string user);
+
+        [OperationContract]
+        string DeleteAppliedPosition(JobApplication a);
         // TODO: Add your service operations here
     }
 

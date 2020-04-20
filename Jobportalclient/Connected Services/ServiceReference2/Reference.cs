@@ -415,6 +415,18 @@ namespace Jobportalclient.ServiceReference2 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdatePostedJob", ReplyAction="http://tempuri.org/IService1/UpdatePostedJobResponse")]
         System.Threading.Tasks.Task<string> UpdatePostedJobAsync(Jobportalclient.ServiceReference2.CompanyDetails c, int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DisplayAppliedPost", ReplyAction="http://tempuri.org/IService1/DisplayAppliedPostResponse")]
+        System.Data.DataSet DisplayAppliedPost(string user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DisplayAppliedPost", ReplyAction="http://tempuri.org/IService1/DisplayAppliedPostResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> DisplayAppliedPostAsync(string user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteAppliedPosition", ReplyAction="http://tempuri.org/IService1/DeleteAppliedPositionResponse")]
+        string DeleteAppliedPosition(Jobportalclient.ServiceReference2.JobApplication a);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteAppliedPosition", ReplyAction="http://tempuri.org/IService1/DeleteAppliedPositionResponse")]
+        System.Threading.Tasks.Task<string> DeleteAppliedPositionAsync(Jobportalclient.ServiceReference2.JobApplication a);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -538,6 +550,22 @@ namespace Jobportalclient.ServiceReference2 {
         
         public System.Threading.Tasks.Task<string> UpdatePostedJobAsync(Jobportalclient.ServiceReference2.CompanyDetails c, int id) {
             return base.Channel.UpdatePostedJobAsync(c, id);
+        }
+        
+        public System.Data.DataSet DisplayAppliedPost(string user) {
+            return base.Channel.DisplayAppliedPost(user);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> DisplayAppliedPostAsync(string user) {
+            return base.Channel.DisplayAppliedPostAsync(user);
+        }
+        
+        public string DeleteAppliedPosition(Jobportalclient.ServiceReference2.JobApplication a) {
+            return base.Channel.DeleteAppliedPosition(a);
+        }
+        
+        public System.Threading.Tasks.Task<string> DeleteAppliedPositionAsync(Jobportalclient.ServiceReference2.JobApplication a) {
+            return base.Channel.DeleteAppliedPositionAsync(a);
         }
     }
 }

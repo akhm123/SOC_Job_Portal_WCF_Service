@@ -66,6 +66,7 @@
 			<form  runat="server" class="contact100-form validate-form">
              
                 <div class="wrap-input100 validate-input">
+                    ID
                      <asp:TextBox ID="id"  class="input100" name="id" placeholder="Eg. Google" runat="server"></asp:TextBox>
 
 					<span class="focus-input100"></span>
@@ -74,7 +75,7 @@
 					</label>
 				</div>
 				<div class="wrap-input100 validate-input">
-                     <asp:TextBox ID="name"  class="input100" name="name" placeholder="Eg. Google" runat="server"></asp:TextBox>
+                    Name <asp:TextBox ID="name"  class="input100" name="name" placeholder="Eg. Google" runat="server"></asp:TextBox>
 
 					<span class="focus-input100"></span>
 					<label class="label-input100" for="Username">
@@ -84,7 +85,7 @@
 
 
                 <div class="wrap-input100 validate-input">
-                                          <asp:TextBox ID="postname"  class="input100" name="postname" placeholder="Eg. SDE" runat="server"></asp:TextBox>
+                        Post Name                  <asp:TextBox ID="postname"  class="input100" name="postname" placeholder="Eg. SDE" runat="server"></asp:TextBox>
 
 					<span class="focus-input100"></span>
 					<label class="label-input100" for="Contact">
@@ -93,7 +94,7 @@
 				</div>
 
                     <div class="wrap-input100 validate-input">
-                      <asp:TextBox ID="vacancy"  class="input100" name="vacancy" placeholder="Eg. 101" runat="server"></asp:TextBox>
+                     Total Vacancy <asp:TextBox ID="vacancy"  class="input100" name="vacancy" placeholder="Eg. 101" runat="server"></asp:TextBox>
 
 					<span class="focus-input100"></span>
 					<label class="label-input100" for="Email">
@@ -102,7 +103,7 @@
 				</div>
 
 				<div class="wrap-input100 validate-input">
-                      <asp:TextBox ID="qualification"  class="input100" name="qualification" placeholder="Eg.B.tech in Cs, M.tech " runat="server"></asp:TextBox>
+                     Qualification <asp:TextBox ID="qualification"  class="input100" name="qualification" placeholder="Eg.B.tech in Cs, M.tech " runat="server"></asp:TextBox>
                  	<span class="focus-input100"></span>
 					<label class="label-input100" for="Role">
 						<span class="lnr lnr-graduation-hat m-b-5"></span>
@@ -110,26 +111,26 @@
 				</div>
 
 				<div class="wrap-input100 validate-input">
-                      <asp:TextBox ID="salary"  class="input100" name="salary" placeholder="Eg.B.tech in Cs, M.tech " runat="server"></asp:TextBox>
+                      Salary <asp:TextBox ID="salary"  class="input100" name="salary" placeholder="Eg.B.tech in Cs, M.tech " runat="server"></asp:TextBox>
                  	<span class="focus-input100"></span>
 					<label class="label-input100" for="Role">
-						<span class="lnr lnr-graduation-hat m-b-5"></span>
+						<span class="fa fa-dollar m-b-5"></span>
 					</label>
 				</div>
 
                 				<div class="wrap-input100 validate-input">
-                      <asp:TextBox ID="description"  class="input100" name="description" placeholder="Eg.B.tech in Cs, M.tech " runat="server"></asp:TextBox>
+                     Description <asp:TextBox ID="description"  class="input100" name="description" placeholder="Eg.B.tech in Cs, M.tech " runat="server"></asp:TextBox>
                  	<span class="focus-input100"></span>
 					<label class="label-input100" for="Role">
-						<span class="lnr lnr-graduation-hat m-b-5"></span>
+						<span class="lnr lnr-license m-b-5"></span>
 					</label>
 				</div>
 
                 				<div class="wrap-input100 validate-input">
-                      <asp:TextBox ID="jobid"  class="input100" name="jobid" placeholder="Eg.B.tech in Cs, M.tech " runat="server"></asp:TextBox>
+                     JobId <asp:TextBox ID="jobid"  class="input100" name="jobid" placeholder="Eg.B.tech in Cs, M.tech " runat="server"></asp:TextBox>
                  	<span class="focus-input100"></span>
 					<label class="label-input100" for="Role">
-						<span class="lnr lnr-graduation-hat m-b-5"></span>
+						<span class="fa fa-code m-b-5"></span>
 					</label>
 				</div>
 

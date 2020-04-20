@@ -7,31 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Jobportalclient
-{
-
-
-    public partial class JobPosting
-    {
-
-        /// <summary>
-        /// Button2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
-
-        /// <summary>
-        /// Companyname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Companyname;
-
+namespace Jobportalclient {
+    
+    
+    public partial class JobPosting {
+        
         /// <summary>
         /// Jobid control.
         /// </summary>
@@ -40,7 +20,7 @@ namespace Jobportalclient
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Jobid;
-
+        
         /// <summary>
         /// PostName control.
         /// </summary>
@@ -49,7 +29,7 @@ namespace Jobportalclient
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PostName;
-
+        
         /// <summary>
         /// Vacancy control.
         /// </summary>
@@ -58,7 +38,7 @@ namespace Jobportalclient
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Vacancy;
-
+        
         /// <summary>
         /// Qualification control.
         /// </summary>
@@ -67,7 +47,7 @@ namespace Jobportalclient
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Qualification;
-
+        
         /// <summary>
         /// Salary control.
         /// </summary>
@@ -76,7 +56,7 @@ namespace Jobportalclient
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Salary;
-
+        
         /// <summary>
         /// message control.
         /// </summary>
@@ -85,7 +65,7 @@ namespace Jobportalclient
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox message;
-
+        
         /// <summary>
         /// Button1 control.
         /// </summary>

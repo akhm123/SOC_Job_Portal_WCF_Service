@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
  <title>Contact V16</title>
@@ -31,32 +32,83 @@
 	<link rel="stylesheet" type="text/css" href="Theme/css/util.css">
 	<link rel="stylesheet" type="text/css" href="Theme/css/main.css">
 <!--===============================================================================================-->
+      <style>
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html {
+ 
+  /*background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);*/
+}
+
+nav {
+  
+}
+
+nav ul {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 18px;
+  font-family: "Open Sans";
+  text-transform:uppercase;
+  color: rgba(0, 35, 122, 0.5);
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(200, 200, 200 , 0.1);
+  color: rgba(0, 35, 122, 0.7);
+}
+body {
+    background:url("Theme1/images/bg-01.jpg") no-repeat  center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+   }
+</style>
 </head>
+
 <body>
     
+    <nav class="bg-white">
+  <ul>
+    <li>
+      <a href="company.aspx">Home</a>
+    </li>
+    
+    <li>
+      <a href="#">About us</a>
+    </li>
+
+    <li>
+      <a href="LogOut.aspx">Logout</a>
+    </li>
+  </ul>
+</nav>
     
     
-    <div class="bg-container-contact100" style="background-image: url(Theme/images/bg-01.jpg);">
-		<div class="contact100-header flex-sb-m">
-			<a href="#" class="contact100-header-logo">
-				<img src="Theme/images/icons/logo.png" alt="LOGO"/>
-			</a>
-           
-			<div>
-				<button class="btn-show-contact100" >
-					Job Posting
-                   </button>
-               
+    
+    
+   
+    
+
+
                  
-			</div>
-		</div>
-	</div>
-             
-<div class="container-contact100">
+<div class="container-contact100" style=" background:url("Theme1/images/bg-01.jpg") no-repeat  center fixed; 
+    -webkit-background-size: cover;">
 		<div class="wrap-contact100">
-			<button class="btn-hide-contact100">
-				<i class="zmdi zmdi-close"></i>
-			</button>
+			
 
 			<div class="contact100-form-title" style="background-image: url(Theme/images/bg-02.jpg);">
 				<span>Job Posting</span>
@@ -65,18 +117,12 @@
                
 
 			<form  runat="server" class="contact100-form validate-form">
-                <asp:Button ID="Button2" runat="server" Text="Button" />
+                
 
-				<div class="wrap-input100 validate-input">
-                     <asp:TextBox ID="Companyname"  class="input100" name="Companyname" placeholder="Eg. Google" runat="server"></asp:TextBox>
-
-					<span class="focus-input100"></span>
-					<label class="label-input100" for="Comapanyname">
-						<span class="lnr lnr-user m-b-2"></span>
-					</label>
-				</div>
+				
 
                 	<div class="wrap-input100 validate-input">
+                        JobId
                     <asp:TextBox ID="Jobid"  class="input100" name="Jobid" placeholder="Eg. 72" runat="server"></asp:TextBox>
 					<span class="focus-input100"></span>
 					<label class="label-input100" for="Jobid">
@@ -85,7 +131,8 @@
 				</div>
 
                 <div class="wrap-input100 validate-input">
-                                          <asp:TextBox ID="PostName"  class="input100" name="Post Name" placeholder="Eg. SDE" runat="server"></asp:TextBox>
+                    Post Name         
+                    <asp:TextBox ID="PostName"  class="input100" name="Post Name" placeholder="Eg. SDE" runat="server"></asp:TextBox>
 
 					<span class="focus-input100"></span>
 					<label class="label-input100" for="PostName">
@@ -94,7 +141,7 @@
 				</div>
 
                     <div class="wrap-input100 validate-input">
-                      <asp:TextBox ID="Vacancy"  class="input100" name="Vacancy" placeholder="Eg. 101" runat="server"></asp:TextBox>
+                      Total Vacancy<asp:TextBox ID="Vacancy"  class="input100" name="Vacancy" placeholder="Eg. 101" runat="server"></asp:TextBox>
 
 					<span class="focus-input100"></span>
 					<label class="label-input100" for="Vacancy">
@@ -103,7 +150,7 @@
 				</div>
 
 				<div class="wrap-input100 validate-input">
-                      <asp:TextBox ID="Qualification"  class="input100" name="Qualification" placeholder="Eg.B.tech in Cs, M.tech " runat="server"></asp:TextBox>
+                      Qualification <asp:TextBox ID="Qualification"  class="input100" name="Qualification" placeholder="Eg.B.tech in Cs, M.tech " runat="server"></asp:TextBox>
                  	<span class="focus-input100"></span>
 					<label class="label-input100" for="Qualification">
 						<span class="lnr lnr-graduation-hat m-b-5"></span>
@@ -112,7 +159,7 @@
 
 
 				<div class="wrap-input100 validate-input">
-					   <asp:TextBox ID="Salary"  class="input100" name="Salary" placeholder="Eg. 18,00,000" runat="server"></asp:TextBox>
+					 Expected Salary  <asp:TextBox ID="Salary"  class="input100" name="Salary" placeholder="Eg. 18,00,000" runat="server"></asp:TextBox>
                  
                 	<span class="focus-input100"></span>
 					<label class="label-input100" for="Salary">
@@ -122,7 +169,7 @@
 
 
 				<div class="wrap-input100 validate-input">
-                  
+                  Message
                     <asp:TextBox ID="message"  class="input100" name="message" placeholder="Your comments..." runat="server"></asp:TextBox>
                     <span class="focus-input100"></span>
 					<label class="label-input100 rs1" for="message">

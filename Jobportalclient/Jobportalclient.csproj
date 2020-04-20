@@ -69,6 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ApplyInCompany.aspx" />
     <Content Include="company.aspx" />
     <None Include="Connected Services\ServiceReference2\item.disco" />
     <None Include="Connected Services\ServiceReference2\configuration91.svcinfo" />
@@ -77,9 +78,57 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="DisplayAppliedJob.aspx" />
+    <Content Include="images\logout.jpg" />
     <Content Include="JobPosting.aspx" />
+    <Content Include="LogOut.aspx" />
     <Content Include="profile.aspx" />
     <Content Include="JobPosting.aspx" />
+    <Content Include="Theme1\css\main.css" />
+    <Content Include="Theme1\css\util.css" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Theme1\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="Theme1\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="Theme1\fonts\montserrat\OFL.txt" />
+    <Content Include="Theme1\images\bg-01.jpg" />
+    <Content Include="Theme1\images\icons\favicon.ico" />
+    <Content Include="Theme1\images\icons\icon-google.png" />
+    <Content Include="Theme1\images\icons\map-marker.png" />
+    <Content Include="Theme1\images\icons\symbol-01.png" />
+    <Content Include="Theme1\js\main.js" />
+    <Content Include="Theme1\vendor\animate\animate.css" />
+    <Content Include="Theme1\vendor\animsition\css\animsition.css" />
+    <Content Include="Theme1\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Theme1\vendor\animsition\js\animsition.js" />
+    <Content Include="Theme1\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Theme1\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Theme1\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Theme1\vendor\bootstrap\js\popper.js" />
+    <Content Include="Theme1\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Theme1\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Theme1\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Theme1\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Theme1\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Theme1\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Theme1\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Theme1\vendor\daterangepicker\moment.js" />
+    <Content Include="Theme1\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Theme1\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Theme1\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Theme1\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Theme1\vendor\select2\select2.css" />
+    <Content Include="Theme1\vendor\select2\select2.js" />
+    <Content Include="Theme1\vendor\select2\select2.min.css" />
+    <Content Include="Theme1\vendor\select2\select2.min.js" />
     <Content Include="Theme\css\main.css" />
     <Content Include="Theme\css\util.css" />
     <Content Include="Theme\fonts\font-awesome-4.7.0\css\font-awesome.css" />
@@ -208,6 +257,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplyInCompany.aspx.cs">
+      <DependentUpon>ApplyInCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplyInCompany.aspx.designer.cs">
+      <DependentUpon>ApplyInCompany.aspx</DependentUpon>
+    </Compile>
     <Compile Include="company.aspx.cs">
       <DependentUpon>company.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -219,6 +275,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayAppliedJob.aspx.cs">
+      <DependentUpon>DisplayAppliedJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayAppliedJob.aspx.designer.cs">
+      <DependentUpon>DisplayAppliedJob.aspx</DependentUpon>
     </Compile>
     <Compile Include="JobPosting.aspx.cs">
       <DependentUpon>JobPosting.aspx</DependentUpon>
@@ -240,6 +303,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="profile.aspx.cs">
       <DependentUpon>profile.aspx</DependentUpon>
@@ -433,6 +503,85 @@
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe.config" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.rsp" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe.config" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Theme1\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Theme1\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <Content Include="Theme1\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <Content Include="Theme1\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <Content Include="Theme1\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-Black.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-Light.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-Thin.ttf" />
+    <Content Include="Theme1\fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="Theme1\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Theme1\vendor\bootstrap\css\bootstrap.min.css.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -18,7 +18,6 @@ namespace jobportalservice
         {
           
             con.Open();
-           
             SqlCommand cmd = new SqlCommand("Select * from [User] where UserName in(Select UserName from JobApplication where Companyname=@Company)", con);
             cmd.Parameters.AddWithValue("@Company", CompanyName);
             cmd.ExecuteNonQuery();
@@ -28,6 +27,46 @@ namespace jobportalservice
             cmd.ExecuteNonQuery();
             con.Close();
             return ds;
+        }
+
+        public DataSet DisplayAppliedPost(string user)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\harsh\Documents\ExSoc.mdf;Integrated Security=True;Connect Timeout=30");
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("Select * from  [JobApplication]  where JobApplication.UserName=@user", con);//  in (Select UserName from JobApplication where UserName=@user)", con);
+            cmd.Parameters.AddWithValue("@user", user);
+            cmd.ExecuteNonQuery();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            return ds;
+        }
+
+
+        public string DeleteAppliedPosition(JobApplication a)
+        {
+            string message;
+           SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\harsh\Documents\ExSoc.mdf;Integrated Security=True;Connect Timeout=30");
+             con.Open();
+            SqlCommand cmd = new SqlCommand("Delete From [JobApplication] Where UserName =@UserName and Companyname=@company and Jobid=@jobid", con);
+            cmd.Parameters.AddWithValue("@UserName", a.UserName);
+            cmd.Parameters.AddWithValue("@Company", a.Companyname);
+            cmd.Parameters.AddWithValue("@jobid", a.Jobid);
+            int result = cmd.ExecuteNonQuery();
+            //int result = cmd.ExecuteNonQuery();
+            if (result == 1)
+            {
+                message = "deleted";
+            }
+            else
+            {
+                message = " Details not deleeted successfully";
+            }
+            con.Close();
+            return message;
         }
 
         public DataSet SelectUserbyPostCompany(string CompanyName,string jobid)
@@ -62,6 +101,17 @@ namespace jobportalservice
         public string InsertData(CompanyDetails c)
         {
             string Message;
+            con.Open();
+            SqlCommand cmd1 = new SqlCommand("select * from Company where name=@Company and Jobid=@Jobid", con);
+            
+            cmd1.Parameters.AddWithValue("@Company", c.Name);
+            cmd1.Parameters.AddWithValue("@jobid", c.Jobid);
+            SqlDataReader rdr = cmd1.ExecuteReader();
+            if (rdr.Read())
+            {
+                return "AlreadyPosted for this position";
+            }
+            con.Close();
             con.Open();
             SqlCommand cmd = new SqlCommand("insert into Company(name,postname,vacancy,qualification,salary,description,jobid) values(@name,@postname,@vacancy,@qualification,@salary,@description,@jobid)", con);
             cmd.Parameters.AddWithValue("@name",c.Name);
@@ -163,6 +213,17 @@ namespace jobportalservice
         public string ApplyForCompany(JobApplication a)
         {
             string message;
+            con.Open();
+            SqlCommand cmd1 = new SqlCommand("select * from JobApplication where Companyname=@Company and UserName=@UserName and Jobid=@Jobid", con);
+            cmd1.Parameters.AddWithValue("@UserName", a.UserName);
+            cmd1.Parameters.AddWithValue("@Company", a.Companyname);
+            cmd1.Parameters.AddWithValue("@jobid", a.Jobid);
+            SqlDataReader rdr = cmd1.ExecuteReader();
+            if (rdr.Read())
+            {
+                return "Already Applied";
+            }
+            con.Close();
             con.Open();
             SqlCommand cmd = new SqlCommand("insert into JobApplication (UserName,Companyname,Jobid) values(@UserName,@Company,@Jobid)", con);
             cmd.Parameters.AddWithValue("@UserName", a.UserName);

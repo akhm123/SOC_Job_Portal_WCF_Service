@@ -32,17 +32,13 @@ namespace Jobportalclient
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("ApplyInCompany.aspx");
         }
 
-        protected void Button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
+     
         protected void Button3_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("DisplayAppliedJob.aspx");
         }
     }
 }

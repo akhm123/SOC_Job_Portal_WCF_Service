@@ -29,7 +29,10 @@ namespace Jobportalclient
             string name = GridView1.Rows[x].Cells[3].Text;
             string postname = GridView1.Rows[x].Cells[4].Text;
             string k = s.DeletePostedJob(name,postname);
-            Response.Redirect("company.aspx");
+
+
+            Response.Write("<script>alert('" + k + "')</script>");
+
 
         }
         protected void updatedetails(object sender, System.EventArgs e)
