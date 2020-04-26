@@ -341,5 +341,96 @@ namespace jobportalservice
             con.Close();
             return message;
         }
+
+
+        public DataSet GetUsers()
+        {
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("Select * from [User] where Role=@user", con);
+            cmd.Parameters.AddWithValue("@user", "user");
+            //    cmd.Parameters.AddWithValue("@jobid", jobid);
+            cmd.ExecuteNonQuery();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            return ds;
+        }
+        public DataSet GetCompany()
+        {
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("Select * from [User] where Role=@user", con);
+            cmd.Parameters.AddWithValue("@user", "company");
+            //    cmd.Parameters.AddWithValue("@jobid", jobid);
+            cmd.ExecuteNonQuery();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            return ds;
+        }
+        public DataSet GetJobApplicationDetails()
+        {
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("Select * from [JobApplication]", con);
+            // cmd.Parameters.AddWithValue("@user", "company");
+            //    cmd.Parameters.AddWithValue("@jobid", jobid);
+            cmd.ExecuteNonQuery();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            return ds;
+        }
+
+        public string DeleteUser(string username)
+        {
+            string message;
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Delete From [User] Where UserName=@name", con);
+            cmd.Parameters.AddWithValue("@name", username);
+
+            int result = cmd.ExecuteNonQuery();
+            //int result = cmd.ExecuteNonQuery();
+            if (result == 1)
+            {
+                message = "deleted";
+            }
+            else
+            {
+                message = " Details not deleeted successfully";
+            }
+            con.Close();
+            return message;
+        }
+        public string DeleteCompany(string companyname)
+        {
+            string message;
+        
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Delete From [User] Where UserName=@name", con);
+            cmd.Parameters.AddWithValue("@name", companyname);
+
+            int result = cmd.ExecuteNonQuery();
+            //int result = cmd.ExecuteNonQuery();
+            if (result == 1)
+            {
+                message = "deleted";
+            }
+            else
+            {
+                message = " Details not deleeted successfully";
+            }
+            con.Close();
+            return message;
+        }
+
     }
 }

@@ -69,6 +69,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminHome.aspx" />
+    <Content Include="adminviewalluserapplication.aspx" />
+    <Content Include="adminviewcompany.aspx" />
+    <Content Include="adminviewpost.aspx" />
+    <Content Include="adminviewuser.aspx" />
     <Content Include="ApplyInCompany.aspx" />
     <Content Include="company.aspx" />
     <None Include="Connected Services\ServiceReference2\item.disco" />
@@ -257,6 +262,41 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminviewalluserapplication.aspx.cs">
+      <DependentUpon>adminviewalluserapplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminviewalluserapplication.aspx.designer.cs">
+      <DependentUpon>adminviewalluserapplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminviewcompany.aspx.cs">
+      <DependentUpon>adminviewcompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminviewcompany.aspx.designer.cs">
+      <DependentUpon>adminviewcompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminviewpost.aspx.cs">
+      <DependentUpon>adminviewpost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminviewpost.aspx.designer.cs">
+      <DependentUpon>adminviewpost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminviewuser.aspx.cs">
+      <DependentUpon>adminviewuser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminviewuser.aspx.designer.cs">
+      <DependentUpon>adminviewuser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ApplyInCompany.aspx.cs">
       <DependentUpon>ApplyInCompany.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

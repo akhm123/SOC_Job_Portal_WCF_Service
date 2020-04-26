@@ -146,7 +146,7 @@ body {
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
 						
-                         <asp:TextBox CssClass="input100" ID="TextBox3" runat="server" placeholder="password"></asp:TextBox>
+                         <asp:TextBox CssClass="input100" ID="TextBox3" runat="server" placeholder="password" TextMode="Password"></asp:TextBox>
 						<span class="focus-input100"></span>
 					</div>
 
@@ -157,7 +157,7 @@ body {
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
 						
-                         <asp:TextBox CssClass="input100" ID="TextBox4" runat="server" placeholder="Reenter password"></asp:TextBox>
+                         <asp:TextBox CssClass="input100" ID="TextBox4" runat="server" placeholder="Reenter password" TextMode="Password"></asp:TextBox>
 						<span class="focus-input100"></span>
 					</div>
                             

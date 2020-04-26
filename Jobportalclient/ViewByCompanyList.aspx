@@ -149,7 +149,7 @@ body {
                   <form id="form1" runat="server">
         
                        <div>
-        <asp:Label ID="Label1" runat="server" ForeColor="Yellow"></asp:Label>
+        <asp:Label ID="Label1" runat="server"></asp:Label>
             <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
             </asp:DropDownList>
         </div>

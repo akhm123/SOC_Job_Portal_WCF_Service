@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DisplayAppliedJob.aspx.cs" Inherits="Jobportalclient.DisplayAppliedJob" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DisplayAppliedJob.aspx.cs" EnableEventValidation="false" Inherits="Jobportalclient.DisplayAppliedJob" %>
 
 
 <!DOCTYPE html>

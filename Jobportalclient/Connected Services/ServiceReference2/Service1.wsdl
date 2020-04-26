@@ -121,6 +121,36 @@
   <wsdl:message name="IService1_DeleteAppliedPosition_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteAppliedPositionResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompany" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetJobApplicationDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobApplicationDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetJobApplicationDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobApplicationDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompany" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCompanyResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="InsertData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertData" message="tns:IService1_InsertData_InputMessage" />
@@ -177,6 +207,26 @@
     <wsdl:operation name="DeleteAppliedPosition">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteAppliedPosition" message="tns:IService1_DeleteAppliedPosition_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteAppliedPositionResponse" message="tns:IService1_DeleteAppliedPosition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUsers" message="tns:IService1_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUsersResponse" message="tns:IService1_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCompany" message="tns:IService1_GetCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCompanyResponse" message="tns:IService1_GetCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobApplicationDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetJobApplicationDetails" message="tns:IService1_GetJobApplicationDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetJobApplicationDetailsResponse" message="tns:IService1_GetJobApplicationDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteUser" message="tns:IService1_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteUserResponse" message="tns:IService1_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteCompany" message="tns:IService1_DeleteCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteCompanyResponse" message="tns:IService1_DeleteCompany_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -307,6 +357,51 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompany">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobApplicationDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetJobApplicationDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompany">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="NetTcpBinding_IService1" type="tns:IService1">
     <wsp:PolicyReference URI="#NetTcpBinding_IService1_policy" />
@@ -430,6 +525,51 @@
     </wsdl:operation>
     <wsdl:operation name="DeleteAppliedPosition">
       <soap12:operation soapAction="http://tempuri.org/IService1/DeleteAppliedPosition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap12:operation soapAction="http://tempuri.org/IService1/GetUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompany">
+      <soap12:operation soapAction="http://tempuri.org/IService1/GetCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobApplicationDetails">
+      <soap12:operation soapAction="http://tempuri.org/IService1/GetJobApplicationDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap12:operation soapAction="http://tempuri.org/IService1/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCompany">
+      <soap12:operation soapAction="http://tempuri.org/IService1/DeleteCompany" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

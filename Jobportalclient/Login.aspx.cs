@@ -22,10 +22,18 @@ namespace Jobportalclient
             u.UserName = TextBox1.Text;
             u.Password = TextBox2.Text;
             u.Role = DropDownList1.SelectedValue;
-        
+            Session["username"] = u.UserName;
+            Session["role"] = u.Role;
+
+            if (u.UserName == "admin" && u.Password == "admin123")
+                Response.Redirect("AdminHome.aspx");
+
+    
+
             string st = s.Login(u);
             if (st.Equals("login") && u.Role.Equals("user"))
             {
+
                 Session["username"] = u.UserName;
                 Session["role"] = u.Role;
                 Response.Redirect("UserHome.aspx");

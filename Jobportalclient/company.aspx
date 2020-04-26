@@ -130,7 +130,7 @@ body {
                    			
                 </div>
                 <div class="container-contact100-form-btn">
-					 <asp:Button OnClick="Button4_Click" class="contact100-form-btn" ID="Button4" runat="server" Text="Update Details" />
+					 <asp:Button OnClick="Button4_Click" class="contact100-form-btn" ID="Button4" runat="server" Text="View posted Job" />
                    			
                 </div>
 				

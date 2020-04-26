@@ -35,7 +35,7 @@ namespace Jobportalclient
             j.Jobid = Convert.ToInt32(GridView1.Rows[x].Cells[4].Text);
             j.UserName = Session["username"].ToString();
             string k = s.DeleteAppliedPosition(j);
-            Response.Redirect("DisplayAppliedJobs.aspx");
+            Response.Redirect("DisplayAppliedJob.aspx");
 
         }
     }

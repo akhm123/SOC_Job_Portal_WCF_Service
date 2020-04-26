@@ -3,12 +3,15 @@
 
 
 
+
 <!DOCTYPE html>
+
+
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    	<meta charset="UTF-8">
+ <title>Contact V16</title>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="Theme/images/icons/favicon.ico"/>
@@ -33,42 +36,8 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="Theme/css/util.css">
 	<link rel="stylesheet" type="text/css" href="Theme/css/main.css">
-
-    <style>
-
-        .Grid {background-color: #fff; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; font-family:Calibri; color: #474747;}
-
-.Grid td {
-
-      padding: 2px;
-
-      border: solid 1px #c1c1c1; }
-
-.Grid th  {
-
-      padding : 4px 2px;
-
-      color: #fff;
-
-      background: #363670 url(Images/grid-header.png) repeat-x top;
-
-      border-left: solid 1px #525252;
-
-      font-size: 0.9em; }
-
-.Grid .alt {
-
-      background: #fcfcfc url(Images/grid-alt.png) repeat-x top; }
-
-.Grid .pgr {background: #363670 url(Images/grid-pgr.png) repeat-x top; }
-
-.Grid .pgr table { margin: 3px 0; }
-
-.Grid .pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #666; font-weight: bold; color: #fff; line-height: 12px; }  
-
-.Grid .pgr a { color: Gray; text-decoration: none; }
-
-.Grid .pgr a:hover { color: #000; text-decoration: none; }
+<!--===============================================================================================-->
+      <style>
         @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 html {
@@ -117,7 +86,7 @@ body {
 
 <body>
     
-   
+    
     <nav class="bg-white">
   <ul>
     <li>
@@ -134,10 +103,13 @@ body {
   </ul>
 </nav>
     
+    
+   
+    
 
 
                  
-<div class="container-contact100" style="url("Theme1/images/bg-01.jpg") no-repeat  center fixed; 
+<div class="container-contact100" style=" background:url("Theme1/images/bg-01.jpg") no-repeat  center fixed; 
     -webkit-background-size: cover;">
 
     	<div class="wrap-contact100" style="width:1200px" >

@@ -131,7 +131,7 @@ body {
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
 						<%--<input class="input100" type="password" name="pass" >--%>
-                               <asp:TextBox ID="TextBox2" CssClass="input100"  runat="server" placeholder="password"></asp:TextBox>
+                               <asp:TextBox ID="TextBox2" CssClass="input100"  runat="server" placeholder="password" TextMode="Password"></asp:TextBox>
                          
 						<span class="focus-input100"></span>
 					</div>
@@ -143,7 +143,7 @@ body {
 
 					</div>
 
-                    <div class="wrap-input100 validate-input" data-validate = "Password is required"> <asp:DropDownList CssClass="input100" ID="DropDownList1" runat="server">
+                    <div class="wrap-input100 validate-input" data-validate = "Role is required"> <asp:DropDownList CssClass="input100" ID="DropDownList1" runat="server">
                             <asp:ListItem>user</asp:ListItem>
                             <asp:ListItem>company</asp:ListItem>
                         

@@ -427,6 +427,36 @@ namespace Jobportalclient.ServiceReference2 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteAppliedPosition", ReplyAction="http://tempuri.org/IService1/DeleteAppliedPositionResponse")]
         System.Threading.Tasks.Task<string> DeleteAppliedPositionAsync(Jobportalclient.ServiceReference2.JobApplication a);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetUsers", ReplyAction="http://tempuri.org/IService1/GetUsersResponse")]
+        System.Data.DataSet GetUsers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetUsers", ReplyAction="http://tempuri.org/IService1/GetUsersResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetUsersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetCompany", ReplyAction="http://tempuri.org/IService1/GetCompanyResponse")]
+        System.Data.DataSet GetCompany();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetCompany", ReplyAction="http://tempuri.org/IService1/GetCompanyResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetCompanyAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetJobApplicationDetails", ReplyAction="http://tempuri.org/IService1/GetJobApplicationDetailsResponse")]
+        System.Data.DataSet GetJobApplicationDetails();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetJobApplicationDetails", ReplyAction="http://tempuri.org/IService1/GetJobApplicationDetailsResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetJobApplicationDetailsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteUser", ReplyAction="http://tempuri.org/IService1/DeleteUserResponse")]
+        string DeleteUser(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteUser", ReplyAction="http://tempuri.org/IService1/DeleteUserResponse")]
+        System.Threading.Tasks.Task<string> DeleteUserAsync(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteCompany", ReplyAction="http://tempuri.org/IService1/DeleteCompanyResponse")]
+        string DeleteCompany(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteCompany", ReplyAction="http://tempuri.org/IService1/DeleteCompanyResponse")]
+        System.Threading.Tasks.Task<string> DeleteCompanyAsync(string username);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -566,6 +596,46 @@ namespace Jobportalclient.ServiceReference2 {
         
         public System.Threading.Tasks.Task<string> DeleteAppliedPositionAsync(Jobportalclient.ServiceReference2.JobApplication a) {
             return base.Channel.DeleteAppliedPositionAsync(a);
+        }
+        
+        public System.Data.DataSet GetUsers() {
+            return base.Channel.GetUsers();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetUsersAsync() {
+            return base.Channel.GetUsersAsync();
+        }
+        
+        public System.Data.DataSet GetCompany() {
+            return base.Channel.GetCompany();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetCompanyAsync() {
+            return base.Channel.GetCompanyAsync();
+        }
+        
+        public System.Data.DataSet GetJobApplicationDetails() {
+            return base.Channel.GetJobApplicationDetails();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetJobApplicationDetailsAsync() {
+            return base.Channel.GetJobApplicationDetailsAsync();
+        }
+        
+        public string DeleteUser(string username) {
+            return base.Channel.DeleteUser(username);
+        }
+        
+        public System.Threading.Tasks.Task<string> DeleteUserAsync(string username) {
+            return base.Channel.DeleteUserAsync(username);
+        }
+        
+        public string DeleteCompany(string username) {
+            return base.Channel.DeleteCompany(username);
+        }
+        
+        public System.Threading.Tasks.Task<string> DeleteCompanyAsync(string username) {
+            return base.Channel.DeleteCompanyAsync(username);
         }
     }
 }

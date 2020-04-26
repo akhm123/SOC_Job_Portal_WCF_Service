@@ -125,13 +125,16 @@ body {
 
               <h4 class="card-title"></h4>
         <div class="container-login100-form-btn m-t-17">
-						 <asp:Button CssClass="login100-form-btn" ID="Button1" runat="server" Text="YES" class="form-submit" OnClick="Button1_Click"/>
-                       
+					<button class="login100-form-btn" ID="Button2" runat="server" Text="Yes">
+                        Yes
+					</button>
 					</div>
                  
             <div class="container-login100-form-btn m-t-17">
-						 <asp:Button CssClass="login100-form-btn" ID="Button2" runat="server" Text="NO" class="form-submit" OnClick="Button2_Click"/>
-                       
+						 <%--<asp:Button  CssClass="login100-form-btn" ID="Button2" runat="server" Text="NO" class="form-submit" OnClick="Button2_Click"/>--%>
+                   	<button class="login100-form-btn" ID="Button1" runat="server" Text="Yes">
+                        No
+					</button>    
 					</div>
               <br>
           

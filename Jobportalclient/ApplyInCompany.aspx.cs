@@ -20,8 +20,9 @@ namespace Jobportalclient
                 DataTable dt = ds.Tables[0];
                 List<string> l = (from DataRow dr in dt.Rows
 
-                                  select (string)dr["name"]).ToList<string>();
-                DropDownList1.DataSource = l;
+                                  select  (string)dr["name"]).ToList<string>();
+                var fl = l.Distinct();
+                DropDownList1.DataSource = fl.ToList();
                 DropDownList1.DataBind();
 
 
@@ -35,18 +36,15 @@ namespace Jobportalclient
         protected void DropDownList1_SelectedIndexChanged1(object sender, EventArgs e)
         {
             ServiceReference2.Service1Client s = new ServiceReference2.Service1Client("BasicHttpBinding_IService1");
+          //  JobPortalRef.Service1Client s = new JobPortalRef.Service1Client("BasicHttpBinding_IService1");
             string c = DropDownList1.SelectedValue;//.Text;
-
-            //  Session["user"] = "ak";
-            Label1.Text = "";
 
             DataSet ds1 = s.GetCompanyData();
             DataTable dt1 = ds1.Tables[0];
-           
+            string SearchByColumn1 = "name = name";// + c;
             var rows1 = dt1.AsEnumerable()
                .Where(r => r.Field<string>("name") == c);
 
-            //  DataRow[] hasRows = dt.Rows.Find(c);// (Select(SearchByColumn)''
             if (rows1.Any())
                 GridView1.DataSource = rows1.CopyToDataTable();
             GridView1.DataBind();

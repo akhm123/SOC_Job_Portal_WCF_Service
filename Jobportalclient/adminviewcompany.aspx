@@ -1,7 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ApplyInCompany.aspx.cs" Inherits="Jobportalclient.ApplyInCompany" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="adminviewcompany.aspx.cs" EnableEventValidation="false" Inherits="Jobportalclient.adminviewcompany" %>
+
 
 <!DOCTYPE html>
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -32,7 +32,7 @@
 	<link rel="stylesheet" type="text/css" href="Theme/css/util.css">
 	<link rel="stylesheet" type="text/css" href="Theme/css/main.css">
 <!--===============================================================================================-->
-      <style>
+   <style>
         @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 html {
@@ -79,19 +79,17 @@ body {
 </style>
 </head>
 
-<body>
     
-    
-  
     <nav class="bg-white">
   <ul>
     <li>
-      <a href="UserHome.aspx">Home</a>
+      <a href="AdminHome.aspx">Home</a>
     </li>
- 
-         <li>
-      <a href="#">About</a>
+    
+    <li>
+      <a href="#">About us</a>
     </li>
+
     <li>
       <a href="LogOut.aspx">Logout</a>
     </li>
@@ -99,62 +97,29 @@ body {
 </nav>
     
     
-
-                 
-<div class="container-contact100"   style=" background:url("Theme1/images/bg-01.jpg") no-repeat  center fixed; -webkit-background-size: cover;">
-		<div class="wrap-contact100" style="width:1000px">
-           
+   
+    
+    
+<div class="container-contact100" style=" background:url("Theme1/images/bg-01.jpg") no-repeat  center fixed; 
+    -webkit-background-size: cover;">
+		<div class="wrap-contact100" style="width:800px">
+		
 
 			<div class="contact100-form-title" style="background-image: url(Theme/images/bg-02.jpg);">
-				<span>Select Company</span>
+				<span>All Company</span>
 			</div>
           
                
 
 			<form  runat="server" class="contact100-form validate-form">
-              
-               <%-- <div class="container-contact100-form-btn">
-					 <asp:Button OnClick="Button2_Click" class="contact100-form-btn" ID="Button2" runat="server" Text="update" />
-                   			
-                </div>--%>
-               
-				
-               
+			  
 
-                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-               
-                
-               
-			
-			    <asp:DropDownList style="margin: auto" ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged1">
-                </asp:DropDownList>
-				<div class="row" style="width:inherit">  
-                            <div class="col-lg-12 ">  
-                                <div class="table-responsive">
-									</div></div></div>
-				<br />
-				<div class="row" style="width:inherit">  
-                            <div class="col-lg-12 ">  
-                                <div class="table-responsive">
-                <asp:GridView ID="GridView1" runat="server" Width="100%" CssClass="table table-striped table-bordered table-hover" OnSelectedIndexChanged="GridView1_SelectedIndexChanged"><Columns>
+                 <asp:GridView ID="GridView1" runat="server" Width="100%" CssClass="table table-striped table-bordered table-hover" ><Columns>
 			 <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:Button class="btn btn-primary" ID  ="Apply" Text="Apply" runat="server" OnClick="LnKB_Click" />
+                    <asp:Button class="btn btn-primary" ID  ="Delete" Text="Delete" runat="server" OnClick="LnKB_Click" />
                 </ItemTemplate>
             </asp:TemplateField></Columns></asp:GridView>
-									</div></div></div>
-                <%--<asp:GridView ID="GridView1" runat="server">
-					<Columns>
-			 <asp:TemplateField>
-                <ItemTemplate>
-                    <asp:Button AutoPostBack="True" ID ="Apply" Text="Apply" runat="server" OnClick="LnKB_Click" />
-                </ItemTemplate>
-            </asp:TemplateField></Columns>
-                </asp:GridView>--%>
-               
-				
-               
-
                
                
                 

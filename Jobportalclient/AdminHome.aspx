@@ -1,6 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ApplyInCompany.aspx.cs" Inherits="Jobportalclient.ApplyInCompany" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminHome.aspx.cs" Inherits="Jobportalclient.AdminHome" %>
+
 
 <!DOCTYPE html>
+
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -82,16 +84,16 @@ body {
 <body>
     
     
-  
     <nav class="bg-white">
   <ul>
     <li>
-      <a href="UserHome.aspx">Home</a>
+      <a href="AdminHome.aspx">Home</a>
     </li>
- 
-         <li>
-      <a href="#">About</a>
+    
+    <li>
+      <a href="#">About us</a>
     </li>
+
     <li>
       <a href="LogOut.aspx">Logout</a>
     </li>
@@ -99,59 +101,39 @@ body {
 </nav>
     
     
+   
+    
+
 
                  
-<div class="container-contact100"   style=" background:url("Theme1/images/bg-01.jpg") no-repeat  center fixed; -webkit-background-size: cover;">
-		<div class="wrap-contact100" style="width:1000px">
-           
+<div class="container-contact100" style=" background:url("Theme1/images/bg-01.jpg") no-repeat  center fixed; 
+    -webkit-background-size: cover;">
+		<div class="wrap-contact100">
+		
 
 			<div class="contact100-form-title" style="background-image: url(Theme/images/bg-02.jpg);">
-				<span>Select Company</span>
+				<span>Admin Dashboard</span>
 			</div>
           
                
 
 			<form  runat="server" class="contact100-form validate-form">
-              
-               <%-- <div class="container-contact100-form-btn">
-					 <asp:Button OnClick="Button2_Click" class="contact100-form-btn" ID="Button2" runat="server" Text="update" />
+                <div class="container-contact100-form-btn">
+					 <asp:Button OnClick="Button1_Click" class="contact100-form-btn" ID="Button1" runat="server" Text="Manage User" />
                    			
-                </div>--%>
-               
-				
-               
-
-                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-               
-                
-               
-			
-			    <asp:DropDownList style="margin: auto" ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged1">
-                </asp:DropDownList>
-				<div class="row" style="width:inherit">  
-                            <div class="col-lg-12 ">  
-                                <div class="table-responsive">
-									</div></div></div>
-				<br />
-				<div class="row" style="width:inherit">  
-                            <div class="col-lg-12 ">  
-                                <div class="table-responsive">
-                <asp:GridView ID="GridView1" runat="server" Width="100%" CssClass="table table-striped table-bordered table-hover" OnSelectedIndexChanged="GridView1_SelectedIndexChanged"><Columns>
-			 <asp:TemplateField>
-                <ItemTemplate>
-                    <asp:Button class="btn btn-primary" ID  ="Apply" Text="Apply" runat="server" OnClick="LnKB_Click" />
-                </ItemTemplate>
-            </asp:TemplateField></Columns></asp:GridView>
-									</div></div></div>
-                <%--<asp:GridView ID="GridView1" runat="server">
-					<Columns>
-			 <asp:TemplateField>
-                <ItemTemplate>
-                    <asp:Button AutoPostBack="True" ID ="Apply" Text="Apply" runat="server" OnClick="LnKB_Click" />
-                </ItemTemplate>
-            </asp:TemplateField></Columns>
-                </asp:GridView>--%>
-               
+                </div>
+                <div class="container-contact100-form-btn">
+					 <asp:Button OnClick="Button2_Click" class="contact100-form-btn" ID="Button2" runat="server" Text="Manage Company" />
+                   			
+                </div>
+                <div class="container-contact100-form-btn">
+					 <asp:Button OnClick="Button3_Click" class="contact100-form-btn" ID="Button3" runat="server" Text="View all job posted by company" />
+                   			
+                </div>
+                <div class="container-contact100-form-btn">
+					 <asp:Button OnClick="Button4_Click" class="contact100-form-btn" ID="Button4" runat="server" Text="View all user application for job" />
+                   			
+                </div>
 				
                
 
@@ -191,6 +173,8 @@ body {
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
+
 	  gtag('config', 'UA-23581568-13');
 	</script>
 </body>
+</html>

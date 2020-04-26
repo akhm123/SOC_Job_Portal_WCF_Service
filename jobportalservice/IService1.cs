@@ -54,6 +54,21 @@ namespace jobportalservice
 
         [OperationContract]
         string DeleteAppliedPosition(JobApplication a);
+
+
+        [OperationContract]
+        DataSet GetUsers();
+
+        [OperationContract]
+        DataSet GetCompany();
+
+        [OperationContract]
+        DataSet GetJobApplicationDetails();
+
+        [OperationContract]
+        string DeleteUser(string username);
+        [OperationContract]
+        string DeleteCompany(string username);
         // TODO: Add your service operations here
     }
 
